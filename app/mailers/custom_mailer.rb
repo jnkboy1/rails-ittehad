@@ -1,0 +1,3 @@
+class CustomMailer < ApplicationMailer
+
+end

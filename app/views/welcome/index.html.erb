@@ -1,2 +1,9 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+
+<h1>Hello <% if current_user %> <%= current_user.email %> <% else %> Guest <% end %></h1>
+<% if current_user %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?"} %>
+<% else %>
+    <%= link_to "Login", new_user_session_path %>
+    or
+    <%= link_to "Create Account", new_user_registration_path %>
+<% end %>

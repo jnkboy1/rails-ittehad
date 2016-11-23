@@ -1,0 +1,15 @@
+
+<%= form_for @user, url: edit_profile_path, html: { multipart: true } do |f| %>
+
+    <%= f.label "Choose your Profile" %>
+    <!-- <%= f.file_field :avatar, class: "waves-effect waves-light btn pink upload" %> -->
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" name="user[avatar]">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+<% end %>
